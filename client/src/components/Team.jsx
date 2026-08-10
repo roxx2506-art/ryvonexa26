@@ -55,7 +55,7 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <section className="py-20 px-6 bg-[#070814]">
+    <section id="team" className="py-20 px-6 bg-[#070814]">
       <div className="max-w-7xl mx-auto text-center">
         
         {/* Header */}
