@@ -44,7 +44,7 @@ const Brochure = () => {
 
   return (
     <section id="brochure" className="py-20 px-4">
-      
+
       {/* Section Header */}
       <div className="text-center mb-12">
 
@@ -58,8 +58,7 @@ const Brochure = () => {
         </h2>
 
         <p className="max-w-2xl mx-auto text-gray-400">
-          Download the official RYVONEXA '26 brochure detailing full rules,
-          timelines, prize structures, and venue maps.
+          Download the official RYVONEXA '26 brochure.
         </p>
 
       </div>
@@ -70,7 +69,7 @@ const Brochure = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 
-          
+
           {/* =========================
               BROCHURE PREVIEW
           ========================== */}
@@ -234,9 +233,7 @@ const Brochure = () => {
 
                 <CheckCircle className="w-4 h-4 text-yellow-400 shrink-0" />
 
-                <span>
-                  Campus venue map & bus route guide
-                </span>
+
 
               </li>
 
@@ -292,9 +289,8 @@ const Brochure = () => {
               >
 
                 <Download
-                  className={`w-5 h-5 ${
-                    downloading ? 'animate-bounce' : ''
-                  }`}
+                  className={`w-5 h-5 ${downloading ? 'animate-bounce' : ''
+                    }`}
                 />
 
                 {downloading
