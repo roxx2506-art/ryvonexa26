@@ -229,13 +229,7 @@ const Brochure = () => {
 
 
               {/* Item 4 */}
-              <li className="flex items-center gap-2.5">
 
-                <CheckCircle className="w-4 h-4 text-yellow-400 shrink-0" />
-
-
-
-              </li>
 
             </ul>
 
