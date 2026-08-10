@@ -1,0 +1,412 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================
+   RYVONEXA '26 DESIGN SYSTEM & GLASSMORPHISM STYLES
+   ========================================================= */
+
+:root {
+  --bg-primary: #050505;
+  --bg-secondary: #0a0a0a;
+  --bg-glass: rgba(5, 5, 5, 0.85);
+  --bg-glass-card: rgba(255, 255, 255, 0.03);
+  --bg-glass-hover: rgba(255, 255, 255, 0.06);
+  
+  --color-cyan: #D4AF37;
+  --color-purple: #8B0000;
+  --color-pink: #FFD700;
+  --color-blue: #8B6B00;
+  --color-gold: #D4AF37;
+  
+  --text-main: #FFFFFF;
+  --text-muted: #BFBFBF;
+  --text-dark: #808080;
+  
+  --border-glass: rgba(212, 175, 55, 0.15);
+  --border-neon-cyan: rgba(212, 175, 55, 0.3);
+  --border-neon-purple: rgba(139, 0, 0, 0.3);
+  
+  --shadow-neon-cyan: 0 0 20px rgba(212, 175, 55, 0.25);
+  --shadow-neon-purple: 0 0 25px rgba(255, 45, 45, 0.35);
+  --shadow-glass: 0 20px 50px rgba(0, 0, 0, 0.8);
+  
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+  
+  --radius-lg: 20px;
+  --radius-md: 14px;
+  --radius-sm: 8px;
+  
+  --transition-fast: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset & Base Setup */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%, 0% 0%, 0% 0%, 0% 0%; }
+  50% { background-position: 100% 50%, 10% 10%, -10% -10%, 5% 5%; }
+  100% { background-position: 0% 50%, 0% 0%, 0% 0%, 0% 0%; }
+}
+
+@keyframes sweep {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+  100% { transform: translateX(100%); }
+}
+
+body {
+  background: 
+    radial-gradient(circle at 80% 20%, rgba(255, 0, 0, 0.12), transparent 40%),
+    radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.12), transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.05), transparent 60%),
+    linear-gradient(180deg, #050505 0%, #0A0A0A 50%, #000000 100%);
+  background-size: 200% 200%, 100% 100%, 100% 100%, 100% 100%;
+  animation: bgMove 20s infinite ease-in-out;
+  color: var(--text-main);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.03;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.light-sweep {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.08), transparent);
+  transform: translateX(-100%);
+  animation: sweep 8s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Custom Cyber Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #05060f;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-cyan), var(--color-purple));
+  border-radius: 4px;
+}
+
+/* Utility Containers */
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-padding {
+  padding: 6rem 0;
+}
+
+/* Gradient & Neon Typography */
+.font-heading {
+  font-family: var(--font-heading);
+}
+.font-code {
+  font-family: var(--font-code);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-cyan) 50%, var(--color-purple) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-alt {
+  background: linear-gradient(135deg, var(--color-cyan) 0%, var(--color-blue) 50%, var(--color-pink) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.neon-glow-cyan {
+  text-shadow: 0 0 12px rgba(229, 193, 88, 0.6);
+}
+.neon-glow-purple {
+  text-shadow: 0 0 12px rgba(170, 124, 17, 0.6);
+}
+
+/* Glassmorphism Card Utility */
+.glass-card {
+  background: var(--bg-glass-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);
+  transition: var(--transition-smooth);
+}
+
+.glass-card:hover {
+  border-color: #FF2D2D;
+  box-shadow: 0 0 35px rgba(255, 45, 45, 0.25), inset 0 0 20px rgba(212, 175, 55, 0.05);
+}
+
+.glass-nav {
+  background: rgba(5, 5, 5, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+  transition: var(--transition-smooth);
+}
+
+.glass-nav.scrolled {
+  background: rgba(10, 10, 10, 0.95);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 45, 45, 0.15);
+}
+
+/* Section Header Badges & Subtitles */
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--color-cyan);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* Futuristic Buttons */
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+.btn-primary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 2rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  color: #050505;
+  background: linear-gradient(90deg, #D4AF37 0%, #FFD700 50%, #FF2D2D 100%);
+  background-size: 200% 200%;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(255, 45, 45, 0.4);
+  transition: var(--transition-smooth);
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
+  transform: rotate(30deg);
+  animation: shine 4s infinite linear;
+  pointer-events: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 0 35px rgba(255, 45, 45, 0.7);
+  background-position: 100% 0;
+}
+
+.btn-secondary {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  background: #0A0A0A;
+  border: 1px solid #D4AF37;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 45, 45, 0.05);
+  border-color: #FF2D2D;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(255, 45, 45, 0.4);
+}
+
+.btn-glow {
+  animation: pulse-glow 3s infinite alternate;
+}
+
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+  }
+  100% {
+    box-shadow: 0 0 30px rgba(255, 45, 45, 0.5);
+  }
+}
+
+/* Floating Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Modal Overlay Styling */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(5, 6, 16, 0.85);
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Toast Styling */
+.toast-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 2000;
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Custom Filter Buttons */
+.filter-btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, rgba(255, 45, 45, 0.2), rgba(212, 175, 55, 0.2));
+  border-color: var(--color-cyan);
+  color: var(--color-cyan);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+}
+
+.filter-btn:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-main);
+}
+
+/* Premium Animations */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #D4AF37 0%, #F5D76E 25%, #D4AF37 50%, #F5D76E 75%, #D4AF37 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+.hover-lift {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 22px 40px rgba(255, 45, 45, 0.25);
+}
+

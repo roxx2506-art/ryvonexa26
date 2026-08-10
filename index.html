@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="RYVONEXA '26 - National Level Technical & Non-Technical Symposium by Department of Computer Science & Engineering.">
+  <title>RYVONEXA '26 | National Level CSE Symposium</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons & JS Libraries -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+  <!-- Custom Design System Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Canvas Interactive Particles Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- STICKY NAVBAR -->
+  <header id="navbar" class="glass-nav">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo">
+        <div class="logo-icon">
+          <i data-lucide="cpu" class="cyan-glow"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">RYVONEXA <span class="brand-year">'26</span></span>
+          <span class="brand-dept">DEPT. OF CSE</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#events" class="nav-link">Events</a>
+        <a href="#timeline" class="nav-link">Timeline</a>
+        <a href="#brochure" class="nav-link">Brochure</a>
+        <a href="#team" class="nav-link">Team</a>
+        <a href="#locations" class="nav-link">Location</a>
+      </nav>
+
+      <!-- CTA Register Button -->
+      <div class="nav-cta">
+        <a href="https://forms.gle/ULqwLTu2izgfYckC9" target="_blank" class="btn-primary btn-glow">
+          <i data-lucide="sparkles"></i> Register Now
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle Menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-drawer" class="mobile-drawer">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#events" class="mobile-link">Events</a>
+      <a href="#timeline" class="mobile-link">Timeline</a>
+      <a href="#brochure" class="mobile-link">Brochure</a>
+      <a href="#team" class="mobile-link">Team</a>
+      <a href="#locations" class="mobile-link">Location</a>
+      <a href="https://forms.gle/ULqwLTu2izgfYckC9" target="_blank" class="btn-primary w-full mt-4">
+        <i data-lucide="sparkles"></i> Register Now
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="light-sweep"></div>
+      <div class="hero-glow-bg"></div>
+      <div class="container hero-container text-center">
+        <div class="hero-badge">
+          <i data-lucide="award"></i> P.S.R. ENGINEERING COLLEGE (AUTONOMOUS, NAAC A+) • DEPT OF CSE
+        </div>
+
+        <h1 class="hero-title">
+          <span class="gradient-text">RYVONEXA</span> <span class="hero-year">-26</span>
+        </h1>
+
+        <p class="hero-tagline gradient-text-alt">
+          A National Level Inter-Collegiate Technical Symposium
+        </p>
+
+        <!-- Meta Badges -->
+        <div class="hero-meta">
+          <div class="meta-item">
+            <i data-lucide="calendar" class="cyan-icon"></i>
+            <span>16 / 09 / 2026</span>
+          </div>
+          <div class="meta-item">
+            <i data-lucide="map-pin" class="purple-icon"></i>
+            <span>Sivakasi - 626140, Tamil Nadu</span>
+          </div>
+          <div class="meta-item">
+            <i data-lucide="ticket" class="yellow-icon"></i>
+            <span>₹500 / Head • Reg Last Date: 13/09/2026</span>
+          </div>
+        </div>
+
+        <p class="hero-desc">
+          Organized by Computer Association for Folksy Engineers (CAFE), Department of Computer Science and Engineering, P.S.R. Engineering College.
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="hero-actions">
+          <a href="https://forms.gle/ULqwLTu2izgfYckC9" target="_blank" class="btn-primary btn-glow btn-lg">
+            <i data-lucide="sparkles"></i> Register For Symposium
+          </a>
+          <a href="#events" class="btn-secondary btn-lg">
+            Explore 8+ Events <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Live Stats Grid -->
+        <div class="stats-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 42rem; margin-left: auto; margin-right: auto;">
+          <div class="glass-card stat-card">
+            <div class="stat-number purple-text">8+</div>
+            <div class="stat-label">Tech & Non-Tech Events</div>
+          </div>
+          <div class="glass-card stat-card">
+            <div class="stat-number yellow-text">40+</div>
+            <div class="stat-label">Colleges Participating</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN SECTION -->
+    <section class="countdown-section">
+      <div class="container">
+        <div class="glass-card countdown-card">
+          <div class="countdown-header">
+            <i data-lucide="clock" class="cyan-icon spin-slow"></i> LIVE COUNTDOWN TIMER
+          </div>
+          <h2 class="countdown-title">Event Starts In</h2>
+
+          <!-- Timer Box Grid -->
+          <div class="timer-grid">
+            <div class="timer-box">
+              <span id="timer-days" class="timer-num cyan-text">00</span>
+              <span class="timer-label">Days</span>
+            </div>
+            <div class="timer-box">
+              <span id="timer-hours" class="timer-num purple-text">00</span>
+              <span class="timer-label">Hours</span>
+            </div>
+            <div class="timer-box">
+              <span id="timer-mins" class="timer-num pink-text">00</span>
+              <span class="timer-label">Minutes</span>
+            </div>
+            <div class="timer-box">
+              <span id="timer-secs" class="timer-num yellow-text pulse">00</span>
+              <span class="timer-label">Seconds</span>
+            </div>
+          </div>
+
+          <div class="countdown-action">
+            <a href="https://forms.gle/ULqwLTu2izgfYckC9" target="_blank" class="btn-primary btn-glow">
+              <i data-lucide="sparkles"></i> Register Now For All Events
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS SECTION -->
+    <section id="events" class="section-padding">
+      <div class="container">
+        <div class="text-center mb-12">
+          <div class="section-badge">
+            <i data-lucide="sparkles"></i> COMPETE & CONQUER
+          </div>
+          <h2 class="section-title">
+            Symposium <span class="gradient-text">Events & Battles</span>
+          </h2>
+          <p class="section-subtitle">
+            Explore 8 flagship competitive arenas designed for coders, hackers, researchers, gamers, and visual creators.
+          </p>
+
+          <!-- Category Filter Tabs -->
+          <div class="filter-tabs">
+            <button class="filter-btn active" data-filter="all">All Events (8)</button>
+            <button class="filter-btn" data-filter="technical">Technical Events</button>
+            <button class="filter-btn" data-filter="non-technical">Non-Technical Events</button>
+          </div>
+        </div>
+
+        <!-- Event Cards Container -->
+        <div id="events-grid" class="events-grid">
+          <!-- Dynamic JS Injection -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE SECTION -->
+    <section id="timeline" class="section-padding">
+      <div class="container">
+        <div class="text-center mb-16">
+          <div class="section-badge">
+            <i data-lucide="clock"></i> SCHEDULE & HOURS
+          </div>
+          <h2 class="section-title">
+            Symposium <span class="gradient-text">Event Timeline</span>
+          </h2>
+          <p class="section-subtitle">
+            Structured full-day itinerary from 9:00 AM to 4:00 PM featuring keynotes, competitive hackathons, dining, and prize ceremonies.
+          </p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"><i data-lucide="check-circle-2"></i></div>
+            <div class="glass-card timeline-card">
+              <span class="timeline-time">09:30 AM</span>
+              <h3>Registration & Welcome Desk</h3>
+              <div class="timeline-location">📍 Main Entrance Lobby</div>
+              <p>Participant check-in, event badge verification, welcome kit distribution, and breakfast refreshment.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"><i data-lucide="play"></i></div>
+            <div class="glass-card timeline-card">
+              <span class="timeline-time">10:00 AM</span>
+              <h3>Grand Inauguration Ceremony</h3>
+              <div class="timeline-location">📍 Tech Park Auditorium</div>
+              <p>Lamp lighting, welcome address by HOD CSE, and keynote speech by Chief Guest & Industry Leader.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"><i data-lucide="zap"></i></div>
+            <div class="glass-card timeline-card">
+              <span class="timeline-time">10:30 AM</span>
+              <h3>Technical & Non-Technical Events Start</h3>
+              <div class="timeline-location">📍 Labs & Seminar Halls</div>
+              <p>Commencement of Code Chaos, WebForge Hackathon, Paper Matrix, and Pixel Craft UI competition.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"><i data-lucide="utensils"></i></div>
+            <div class="glass-card timeline-card">
+              <span class="timeline-time">01:00 PM</span>
+              <h3>Grand Buffet Lunch & Networking</h3>
+              <div class="timeline-location">📍 Campus Dining Lawn</div>
+              <p>Complimentary feast lunch break for all registered participants and faculty delegates.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"><i data-lucide="clock"></i></div>
+            <div class="glass-card timeline-card">
+              <span class="timeline-time">02:00 PM</span>
+              <h3>Technical & Non-Technical Events Continue</h3>
+              <div class="timeline-location">📍 Labs & Seminar Halls</div>
+              <p>Resume afternoon battles: Valorant E-sports finals, AI Nexus prompt engineering, and Pixel Craft designs.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"><i data-lucide="award"></i></div>
+            <div class="glass-card timeline-card">
+              <span class="timeline-time">03:00 PM</span>
+              <h3>Valedictory & Award Ceremony</h3>
+              <div class="timeline-location">📍 Main Auditorium Stage</div>
+              <p>Awarding trophies, certificates, and closing remarks by Symposium Student Chairs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BROCHURE SECTION -->
+    <section id="brochure" class="section-padding bg-dark-glass">
+      <div class="container">
+        <div class="text-center mb-12">
+          <div class="section-badge">
+            <i data-lucide="file-text"></i> OFFICIAL PUBLICATION
+          </div>
+          <h2 class="section-title">
+            Symposium <span class="gradient-text">Event Brochure</span>
+          </h2>
+          <p class="section-subtitle">
+            Download the official RYVONEXA '26 brochure detailing full rules, timelines, prize structures, and venue maps.
+          </p>
+        </div>
+
+        <div class="glass-card brochure-card">
+          <div class="brochure-grid">
+            <div class="brochure-preview">
+              <a href="21ca1aab-cd33-4e3d-af20-ff5181d76d10.png" target="_blank" title="Click to view full size image">
+                <img src="21ca1aab-cd33-4e3d-af20-ff5181d76d10.png" alt="P.S.R. Engineering College - RYVONEXA-26 Official Brochure Poster" class="brochure-img-poster">
+              </a>
+            </div>
+
+            <div class="brochure-content">
+              <h3>Official P.S.R. Engineering College Brochure</h3>
+              <ul class="brochure-list">
+                <li><i data-lucide="check-circle" class="cyan-icon"></i> <strong>Institution:</strong> P.S.R. Engineering College (Autonomous, NAAC A+)</li>
+                <li><i data-lucide="check-circle" class="purple-icon"></i> <strong>Organized by:</strong> Dept. of Computer Science & Engineering (CAFE)</li>
+                <li><i data-lucide="check-circle" class="pink-icon"></i> <strong>Event Date:</strong> September 16, 2026</li>
+                <li><i data-lucide="check-circle" class="yellow-icon"></i> <strong>Registration Fee:</strong> ₹500 Per Head (Last Date: 13/09/2026)</li>
+              </ul>
+
+              <a href="21ca1aab-cd33-4e3d-af20-ff5181d76d10.png" download="RYVONEXA_26_Official_Brochure.png" class="btn-primary btn-glow btn-lg">
+                <i data-lucide="download"></i> Download Poster Brochure
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section id="team" class="section-padding">
+      <div class="container">
+        <div class="text-center mb-16">
+          <div class="section-badge">
+            <i data-lucide="users"></i> ORGANIZERS & VISIONARIES
+          </div>
+          <h2 class="section-title">
+            Meet The <span className="gradient-text">Symposium Team</span>
+          </h2>
+          <p class="section-subtitle">
+            The passionate faculty convenors and student coordinators orchestrating RYVONEXA '26.
+          </p>
+        </div>
+
+        <div id="team-grid" class="team-grid">
+          <!-- Dynamic JS Injection -->
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION SECTION -->
+    <section id="locations" class="section-padding bg-dark-glass">
+      <div class="container">
+        <div class="text-center mb-12">
+          <div class="section-badge">
+            <i data-lucide="map-pin"></i> VENUE & DIRECTIONS
+          </div>
+          <h2 class="section-title">
+            Symposium <span class="gradient-text">Location & Reach</span>
+          </h2>
+          <p class="section-subtitle">
+            Join us live at the Tech Park Auditorium, Campus Oval, College of Computer Science & Engineering.
+          </p>
+        </div>
+
+        <div class="location-grid">
+          <div class="glass-card location-info">
+            <h3>Campus Location</h3>
+            <p class="location-hall">Tech Park Auditorium, Block 4</p>
+            <p class="location-address">
+              Department of Computer Science & Engineering, Institute of Technology, Innovation Campus Highway, Main Metro Corridor - 600028.
+            </p>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <i data-lucide="phone" class="cyan-icon"></i>
+                <div>
+                  <span class="label">Helpline Numbers</span>
+                  <span class="val">+91 98765 43210 / +91 44 2745 8900</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i data-lucide="mail" class="purple-icon"></i>
+                <div>
+                  <span class="label">Official Support Email</span>
+                  <span class="val">ryvonexa2026@cse.edu</span>
+                </div>
+              </div>
+              <div class="contact-item">
+                <i data-lucide="bus" class="pink-icon"></i>
+                <div>
+                  <span class="label">Bus Routes Provided</span>
+                  <span class="val text-xs">Free college buses available from all major metro stations starting 7:30 AM.</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://maps.google.com" target="_blank" class="btn-primary w-full mt-4">
+              <i data-lucide="navigation"></i> Open Google Maps Navigation
+            </a>
+          </div>
+
+          <div class="glass-card map-container">
+            <iframe
+              title="Campus Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.971556088219!2d80.2209!3d12.9731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzIzLjIiTiA4MMKwMTMnMTUuMiJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+              class="google-map-iframe"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="section-padding">
+      <div class="container max-w-4xl">
+        <div class="text-center mb-12">
+          <div class="section-badge">
+            <i data-lucide="help-circle"></i> QUESTIONS & SUPPORT
+          </div>
+          <h2 class="section-title">
+            Frequently Asked <span class="gradient-text">Questions</span>
+          </h2>
+        </div>
+
+        <div id="faq-list" class="faq-list">
+          <!-- Dynamic Accordion Injected by JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="logo-icon"><i data-lucide="cpu"></i></div>
+            <div class="brand-text">
+              <span class="brand-title">RYVONEXA <span class="brand-year">'26</span></span>
+              <span class="brand-dept">DEPT. OF CSE</span>
+            </div>
+          </div>
+          <p>National Level Technical & Non-Technical Symposium bringing together aspiring engineers, hackers, visionaries, and digital creators.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Navigation</h4>
+          <a href="#home">Home</a>
+          <a href="#events">Events & Battles</a>
+          <a href="#timeline">Event Timeline</a>
+          <a href="#brochure">Brochure PDF</a>
+          <a href="#team">Organizers Team</a>
+          <a href="#locations">Location & Venue</a>
+        </div>
+
+        <div class="footer-socials">
+          <h4>Connect With Us</h4>
+          <div class="social-icons">
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            <a href="mailto:support@ryvonexa.in" aria-label="Email"><i data-lucide="mail"></i></a>
+          </div>
+          <button id="scroll-top-btn" class="btn-secondary text-xs">
+            <i data-lucide="arrow-up"></i> Back To Top
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 RYVONEXA. Department of CSE. All Rights Reserved.</div>
+        <div>Crafted with <i data-lucide="heart" class="red-icon"></i> for Engineers & Creators</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- EVENT DETAILS MODAL -->
+  <div id="event-modal" class="modal-overlay hidden">
+    <div class="glass-card modal-box">
+      <button class="close-modal-btn"><i data-lucide="x"></i></button>
+      <div id="event-modal-content"></div>
+    </div>
+  </div>
+
+  <!-- REGISTER MODAL -->
+  <div id="register-modal" class="modal-overlay hidden">
+    <div class="glass-card modal-box">
+      <button class="close-modal-btn"><i data-lucide="x"></i></button>
+      
+      <div id="register-modal-content">
+        <!-- Form UI -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ADMIN MODAL -->
+  <div id="admin-modal" class="modal-overlay hidden">
+    <div class="glass-card modal-box modal-wide">
+      <button class="close-modal-btn"><i data-lucide="x"></i></button>
+      <div class="modal-header flex-between">
+        <div>
+          <div class="section-badge"><i data-lucide="shield"></i> ADMIN PORTAL</div>
+          <h2>Live Registered Participants</h2>
+        </div>
+        <button id="refresh-admin-btn" class="btn-secondary text-xs"><i data-lucide="refresh-cw"></i> Refresh</button>
+      </div>
+
+      <input type="text" id="admin-search-input" placeholder="Search by Reg ID, Name, College..." class="form-input mb-4">
+
+      <div class="table-container">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>REG ID</th>
+              <th>NAME</th>
+              <th>COLLEGE</th>
+              <th>YEAR</th>
+              <th>EVENTS</th>
+              <th>FEE</th>
+              <th>STATUS</th>
+            </tr>
+          </thead>
+          <tbody id="admin-table-body">
+            <!-- Injected by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
