@@ -37,7 +37,7 @@ const teamMembers = [
   {
     name: "Ranjith S",
     role: "Event Coordinator",
-    avatar: "ranjith.jpg",
+    avatar: "8182.jpg",
     linkedin: "",
     github: "",
     mail: "aditya@ryvonexa.in",
