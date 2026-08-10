@@ -17,7 +17,7 @@ const Brochure = () => {
     try {
       const link = document.createElement('a');
 
-      link.href = '\CSE Symposium OG Final Final.pdf';
+      link.href = '/CSE Symposium OG Final Final.pdf';
       link.download = 'RYVONEXA-26_Official_Brochure.pdf';
 
       document.body.appendChild(link);
@@ -36,7 +36,7 @@ const Brochure = () => {
   // Open PDF in a new browser tab
   const viewBrochure = () => {
     window.open(
-      '\CSE Symposium OG Final Final.pdf',
+      '/CSE Symposium OG Final Final.pdf',
       '_blank',
       'noopener,noreferrer'
     );

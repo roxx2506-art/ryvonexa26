@@ -85,7 +85,7 @@ const Team = () => {
               <div className="relative w-28 h-28 mx-auto mb-5">
                 <div className="w-full h-full rounded-full p-[2px] bg-gradient-to-tr from-cyan-400 to-purple-600 shadow-lg">
                   <img
-                    src={member.avatar}
+                    src={member.avatar.startsWith('/') || member.avatar.startsWith('http') ? member.avatar : `/${member.avatar}`}
                     alt={member.name}
                     className="w-full h-full object-cover object-top rounded-full bg-[#11110e]"
                     onError={(e) => {
