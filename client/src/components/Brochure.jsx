@@ -198,7 +198,7 @@ const Brochure = () => {
                 <CheckCircle className="w-4 h-4 text-cyan-400 shrink-0" />
 
                 <span>
-                  Comprehensive rulebook & problem statements
+                  Get the event details,etc.
                 </span>
 
               </li>
@@ -210,7 +210,7 @@ const Brochure = () => {
                 <CheckCircle className="w-4 h-4 text-purple-400 shrink-0" />
 
                 <span>
-                  Detailed schedule and event coordinator details
+                  Schedule and event coordinator details
                 </span>
 
               </li>
