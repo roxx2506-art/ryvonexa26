@@ -36,13 +36,13 @@ const teamMembers = [
   },
 
   {
-    name: "Abhishek muthaiah S.K",
+    name: "Abishek Muthaiah S.K",
     role: "Event Coordinator",
     avatar:
       "22.jpg",
     linkedin: "",
     github: "",
-    mail: "ryvonexa26@gmail.com",
+    mail: "abishekmuthaiahsk@gmail.com",
   },
   {
     name: "Ranjith S",
