@@ -77,66 +77,72 @@ const Team = () => {
           {teamMembers.map((member, idx) => (
             <div
               key={idx}
-              className="relative p-6 rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 hover:-translate-y-2 transition duration-300 group overflow-hidden"
+              className="relative p-6 rounded-2xl bg-white/5 backdrop-blur-lg border border-white/10 hover:-translate-y-2 transition duration-300 group overflow-hidden flex flex-col items-center justify-between"
             >
               {/* Glow effect */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 bg-gradient-to-tr from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-300 bg-gradient-to-tr from-cyan-500/10 via-purple-500/10 to-pink-500/10 pointer-events-none" />
 
-              {/* Avatar */}
-              <div className="relative w-28 h-28 mx-auto mb-5">
-                <div className="w-full h-full rounded-full p-[2px] bg-gradient-to-tr from-cyan-400 to-purple-600 shadow-lg">
-                  <img
-                    src={member.avatar.startsWith('/') || member.avatar.startsWith('http') ? member.avatar : `/${member.avatar}`}
-                    alt={member.name}
-                    className="w-full h-full object-cover object-top rounded-full bg-[#11110e]"
-                    onError={(e) => {
-                      e.target.src =
-                        "https://via.placeholder.com/150?text=User";
-                    }}
-                  />
+              <div className="relative z-10 w-full flex flex-col items-center">
+                {/* Avatar */}
+                <div className="relative w-28 h-28 mx-auto mb-5">
+                  <div className="w-full h-full rounded-full p-[2px] bg-gradient-to-tr from-cyan-400 to-purple-600 shadow-lg">
+                    <img
+                      src={member.avatar.startsWith('/') || member.avatar.startsWith('http') ? member.avatar : `/${member.avatar}`}
+                      alt={member.name}
+                      className="w-full h-full object-cover object-top rounded-full bg-[#11110e]"
+                      onError={(e) => {
+                        e.target.src =
+                          "https://via.placeholder.com/150?text=User";
+                      }}
+                    />
+                  </div>
                 </div>
-              </div>
 
-              {/* Name */}
-              <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition">
-                {member.name}
-              </h3>
+                {/* Name */}
+                <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition text-center">
+                  {member.name}
+                </h3>
 
-              {/* Role */}
-              <p className="text-sm text-gray-400 mb-4">{member.role}</p>
+                {/* Role */}
+                <p className="text-sm text-gray-400 mb-4 text-center">{member.role}</p>
 
-              {/* Social Icons */}
-              <div className="flex justify-center gap-4 mt-3">
-                {member.linkedin && (
-                  <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-cyan-400 transition"
-                  >
-                    <Linkedin size={18} />
-                  </a>
-                )}
+                {/* Social Icons & Mail */}
+                <div className="flex flex-col items-center gap-2 mt-auto w-full">
+                  {member.mail && (
+                    <a
+                      href={`mailto:${member.mail}`}
+                      className="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 hover:text-cyan-300 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 px-3 py-1.5 rounded-lg transition group/mail cursor-pointer max-w-full"
+                      title={`Email ${member.name}`}
+                    >
+                      <Mail size={14} className="shrink-0 text-cyan-400 group-hover/mail:scale-110 transition" />
+                      <span className="truncate">{member.mail}</span>
+                    </a>
+                  )}
 
-                {member.github && (
-                  <a
-                    href={member.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-cyan-400 transition"
-                  >
-                    <Github size={18} />
-                  </a>
-                )}
+                  <div className="flex justify-center gap-4 mt-1">
+                    {member.linkedin && (
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-cyan-400 transition"
+                      >
+                        <Linkedin size={18} />
+                      </a>
+                    )}
 
-                {member.mail && (
-                  <a
-                    href={`mailto:${member.mail}`}
-                    className="text-gray-400 hover:text-cyan-400 transition"
-                  >
-                    <Mail size={18} />
-                  </a>
-                )}
+                    {member.github && (
+                      <a
+                        href={member.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-400 hover:text-cyan-400 transition"
+                      >
+                        <Github size={18} />
+                      </a>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           ))}
