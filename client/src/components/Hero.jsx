@@ -10,6 +10,11 @@ const Hero = ({ onOpenRegister, stats }) => {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-cyan-500/15 via-purple-500/10 to-transparent blur-[120px] rounded-full pointer-events-none" />
 
       <div className="container relative z-10 text-center">
+        {/* Department of CSE & CAFE Association Banner */}
+        <div className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-amber-950/40 border border-amber-500/30 text-amber-400 text-xs md:text-sm font-semibold tracking-widest uppercase backdrop-blur-md mb-3 max-w-full text-center">
+          Department of CSE & CAFE Association
+        </div>
+        <br />
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-950/40 border border-red-500/30 text-red-400 text-xs font-semibold tracking-widest uppercase backdrop-blur-md mb-6">
           • Proudly Presents •
         </div>
