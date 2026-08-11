@@ -13,11 +13,12 @@ const Hero = ({ onOpenRegister, stats }) => {
         {/* Department Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs md:text-sm font-semibold tracking-widest uppercase mb-6 backdrop-blur-md animate-pulse">
 
-          National Level Technical Symposium • Department of CSE
+          • National Level Technical Symposium •
         </div>
+        <br />
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs md:text-sm font-semibold tracking-widest uppercase mb-6 backdrop-blur-md animate-pulse">
 
-          • Department of CSE
+          • Department of CSE •
         </div>
 
         {/* Symposium Main Title */}
