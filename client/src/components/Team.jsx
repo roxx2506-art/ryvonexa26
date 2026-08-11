@@ -44,14 +44,7 @@ const teamMembers = [
     github: "",
     mail: "abishekmuthaiahsk@gmail.com",
   },
-  {
-    name: "Ranjith S",
-    role: "Event Coordinator",
-    avatar: "8182.jpg",
-    linkedin: "",
-    github: "",
-    mail: "ranjiths200625@gmail.com",
-  },
+
   {
     name: "Sathees Kumar P",
     role: "Event Coordinator",
@@ -67,13 +60,22 @@ const teamMembers = [
     linkedin: "",
     github: "",
     mail: "backiyalakshmim029@gmail.com",
-  }, {
-    name: "Jeya Jeeva J ",
+  },
+  {
+    name: "Jeya Jeeva J",
     role: "Event Coordinator",
     avatar: "jeeva.jpg",
     linkedin: "",
     github: "",
     mail: "jeyajeevaj17@gmail.com",
+  },
+  {
+    name: "Ranjith S",
+    role: "Event Coordinator",
+    avatar: "8182.jpg",
+    linkedin: "",
+    github: "",
+    mail: "ranjiths200625@gmail.com",
   },
 ];
 
