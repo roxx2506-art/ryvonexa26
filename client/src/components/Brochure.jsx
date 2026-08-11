@@ -15,16 +15,16 @@ const Brochure = () => {
 
   const brochureImageSrc = '/CSE Symposium Most Final Broucher Without Boarder .png';
 
-  const handleDownload = (type = 'png') => {
+  const handleDownload = (type = 'pdf') => {
     setDownloading(true);
     try {
       const link = document.createElement('a');
-      if (type === 'pdf') {
-        link.href = '/CSE Symposium OG Final Final.pdf';
-        link.download = 'RYVONEXA-26_Official_Brochure.pdf';
-      } else {
+      if (type === 'png') {
         link.href = brochureImageSrc;
         link.download = 'RYVONEXA-26_Official_Brochure.png';
+      } else {
+        link.href = '/CSE Symposium OG Final Final.pdf';
+        link.download = 'RYVONEXA-26_Official_Brochure.pdf';
       }
       document.body.appendChild(link);
       link.click();
@@ -57,7 +57,7 @@ const Brochure = () => {
       {/* Brochure Card */}
       <div className="max-w-5xl mx-auto glass-card p-6 md:p-10 border-cyan-500/30 relative overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
+
           {/* Brochure Poster Preview Card (Column 5) */}
           <div className="lg:col-span-5 flex justify-center">
             <div
@@ -150,7 +150,7 @@ const Brochure = () => {
       {isModalOpen && (
         <div className="fixed inset-0 z-50 bg-black/90 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 animate-fadeIn">
           <div className="relative bg-[#090c21] border border-cyan-500/40 rounded-2xl max-w-5xl w-full max-h-[92vh] flex flex-col shadow-[0_0_60px_rgba(0,240,255,0.3)] overflow-hidden">
-            
+
             {/* Modal Header */}
             <div className="flex items-center justify-between px-5 py-3.5 border-b border-white/10 bg-white/5">
               <div className="flex items-center gap-2.5">
