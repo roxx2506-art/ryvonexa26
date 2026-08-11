@@ -12,8 +12,12 @@ const Hero = ({ onOpenRegister, stats }) => {
       <div className="container relative z-10 text-center">
         {/* Department Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs md:text-sm font-semibold tracking-widest uppercase mb-6 backdrop-blur-md animate-pulse">
-          
+
           National Level Technical Symposium • Department of CSE
+        </div>
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs md:text-sm font-semibold tracking-widest uppercase mb-6 backdrop-blur-md animate-pulse">
+
+          • Department of CSE
         </div>
 
         {/* Symposium Main Title */}
@@ -44,7 +48,7 @@ const Hero = ({ onOpenRegister, stats }) => {
 
           <div className="flex items-center gap-2.5 px-5 py-2.5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-lg text-gray-200 text-sm md:text-base font-mono">
             <MapPin className="w-5 h-5 text-purple-400" />
-            <span> Auditorium, CSE Block</span>
+            <span>CSE Block</span>
           </div>
 
         </div>
@@ -52,7 +56,7 @@ const Hero = ({ onOpenRegister, stats }) => {
         {/* Short Description */}
         <p className="text-gray-300 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed font-light">
           Think. Innovate. Compete.<br></br>
-Challenge your technical expertise through speed debugging, competitive coding, prompt engineering, and e-sports while connecting with brilliant minds from across the nation.
+          Challenge your technical expertise through speed debugging, competitive coding, prompt engineering, and e-sports while connecting with brilliant minds from across the nation.
         </p>
 
         {/* Action Buttons */}
@@ -90,7 +94,7 @@ Challenge your technical expertise through speed debugging, competitive coding, 
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 
