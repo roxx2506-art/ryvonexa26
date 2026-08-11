@@ -10,15 +10,13 @@ const Hero = ({ onOpenRegister, stats }) => {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-cyan-500/15 via-purple-500/10 to-transparent blur-[120px] rounded-full pointer-events-none" />
 
       <div className="container relative z-10 text-center">
-        {/* Department Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs md:text-sm font-semibold tracking-widest uppercase mb-6 backdrop-blur-md animate-pulse">
 
-          • National Level Technical Symposium •
-        </div>
         <br />
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs md:text-sm font-semibold tracking-widest uppercase mb-6 backdrop-blur-md animate-pulse">
 
           • Department of CSE •
+          &
+          • Computer Association For Folksy Engineers (CAFE) •
         </div>
 
         {/* Symposium Main Title */}
@@ -35,6 +33,11 @@ const Hero = ({ onOpenRegister, stats }) => {
         <p className="font-heading text-xl sm:text-2xl md:text-3xl font-medium gradient-text max-w-3xl mx-auto mb-8 leading-snug">
           Where innovation meets intelligence!
         </p>
+        {/* Department Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs md:text-sm font-semibold tracking-widest uppercase mb-6 backdrop-blur-md animate-pulse">
+
+          • National Level Technical Symposium •
+        </div>
 
         {/* Event Date & Location Badges */}
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-10">
