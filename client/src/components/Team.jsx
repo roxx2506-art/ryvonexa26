@@ -110,9 +110,11 @@ const Team = () => {
                 <div className="flex flex-col items-center gap-2 mt-auto w-full">
                   {member.mail && (
                     <a
-                      href={`mailto:${member.mail}`}
-                      className="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 hover:text-cyan-300 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 px-3 py-1.5 rounded-lg transition group/mail cursor-pointer max-w-full"
-                      title={`Email ${member.name}`}
+                      href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(member.mail)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-xs font-mono text-cyan-400 hover:text-cyan-300 bg-cyan-500/10 hover:bg-cyan-500/20 border border-cyan-500/30 px-3.5 py-2 rounded-xl transition duration-200 group/mail cursor-pointer max-w-full hover:border-cyan-400/60 hover:shadow-[0_0_15px_rgba(6,182,212,0.3)]"
+                      title={`Send email to ${member.mail}`}
                     >
                       <Mail size={14} className="shrink-0 text-cyan-400 group-hover/mail:scale-110 transition" />
                       <span className="truncate">{member.mail}</span>
