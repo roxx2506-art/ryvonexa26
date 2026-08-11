@@ -13,7 +13,7 @@ const Brochure = () => {
   const [downloading, setDownloading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const brochureImageSrc = '/CSE Symposium Most Final Broucher Without Boarder .png';
+  const brochureImageSrc = '/CSE Symposium Most Final Broucher Without Boarder.png';
 
   const handleDownload = (type = 'pdf') => {
     setDownloading(true);
@@ -23,7 +23,7 @@ const Brochure = () => {
         link.href = brochureImageSrc;
         link.download = 'RYVONEXA-26_Official_Brochure.png';
       } else {
-        link.href = '/CSE Symposium Most Final Broucher .pdf';
+        link.href = '/CSE Symposium Most Final Broucher.pdf';
         link.download = 'RYVONEXA-26_Official_Brochure.pdf';
       }
       document.body.appendChild(link);
@@ -189,7 +189,7 @@ const Brochure = () => {
 
               <div className="flex items-center gap-3 w-full sm:w-auto justify-end">
                 <button
-                  onClick={() => window.open('/CSE Symposium Most Final Broucher .pdf', '_blank')}
+                  onClick={() => window.open('/CSE Symposium Most Final Broucher.pdf', '_blank')}
                   className="px-4 py-2 text-xs font-mono rounded-lg bg-white/10 hover:bg-white/20 text-cyan-300 border border-cyan-500/30 transition flex items-center gap-2"
                 >
                   <ExternalLink className="w-3.5 h-3.5" /> View PDF
