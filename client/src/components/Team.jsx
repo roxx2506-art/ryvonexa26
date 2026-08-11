@@ -8,7 +8,7 @@ const teamMembers = [
     avatar: "hod.jpg",
     linkedin: "",
     github: "",
-    mail: "hod.cse@ryvonexa.in",
+    mail: "rc.balasubramanian@psr.edu.in",
   },
   {
     name: "Dr Ramathilagam Arunagiri",
@@ -16,7 +16,7 @@ const teamMembers = [
     avatar: "coe.jpg",
     linkedin: "",
     github: "",
-    mail: "samyuktha@ryvonexa.in",
+    mail: "ramathilagam@psr.edu.in",
   },
   {
     name: "Dr Palanikumar Rajendran",
@@ -24,7 +24,7 @@ const teamMembers = [
     avatar: "ahod.jpg",
     linkedin: "",
     github: "",
-    mail: "vidyut@ryvonexa.in",
+    mail: "palanikumar@psr.edu.in",
   },
   {
     name: "Dr Priyadarsini Seenivasan",
@@ -32,7 +32,17 @@ const teamMembers = [
     avatar: "priyadharsini.jpg",
     linkedin: "",
     github: "",
-    mail: "meenakshi@ryvonexa.in",
+    mail: "priyadarsini@psr.edu.in",
+  },
+
+  {
+    name: "Abhishek muthaiah S.K",
+    role: "Event Coordinator",
+    avatar:
+      "22.jpg",
+    linkedin: "",
+    github: "",
+    mail: "ryvonexa26@gmail.com",
   },
   {
     name: "Ranjith S",
@@ -40,16 +50,7 @@ const teamMembers = [
     avatar: "8182.jpg",
     linkedin: "",
     github: "",
-    mail: "aditya@ryvonexa.in",
-  },
-  {
-    name: "Akash K",
-    role: "Event Coordinator",
-    avatar:
-      "22.jpg",
-    linkedin: "",
-    github: "",
-    mail: "kavya@ryvonexa.in",
+    mail: "ranjiths200625@gmail.com",
   },
 ];
 
@@ -57,7 +58,7 @@ const Team = () => {
   return (
     <section id="team" className="py-20 px-6 bg-[#070814]">
       <div className="max-w-7xl mx-auto text-center">
-        
+
         {/* Header */}
         <p className="text-cyan-400 font-mono mb-2">
           Organizers & Visionaries
