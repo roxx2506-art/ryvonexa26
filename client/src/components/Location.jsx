@@ -63,7 +63,7 @@ const Location = () => {
                     </span>
 
                     <span className="text-white font-mono font-medium">
-                      9344844533 / 9751780504 / 6369811479
+                      6369045590/ 7904832661 / 9751780504
                     </span>
                   </div>
                 </div>
@@ -80,7 +80,7 @@ const Location = () => {
                     </span>
 
                     <span className="text-white font-mono font-medium">
-                      ryvonexa26@gmail.com
+                      cse_association@psr.edu.in
                     </span>
                   </div>
                 </div>
@@ -98,7 +98,7 @@ const Location = () => {
 
                     <span className="text-white text-xs font-light leading-relaxed">
                       College transportation facilities are available for
-                      students and faculty. Transport Contact: 9751780504.
+                      students and faculty. Transport Contact: 8760923731.
                     </span>
                   </div>
                 </div>
