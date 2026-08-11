@@ -228,6 +228,126 @@ body::before {
   margin: 0 auto;
 }
 
+/* Responsive Enhancements */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  .section-padding {
+    padding: 7rem 0;
+  }
+
+  .section-title {
+    font-size: clamp(2.4rem, 2.8vw, 3.1rem);
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .section-padding {
+    padding: 5rem 0;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 3vw, 2.6rem);
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  body {
+    line-height: 1.55;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section-padding {
+    padding: 4rem 0;
+  }
+
+  .section-badge {
+    font-size: 0.72rem;
+    padding: 0.35rem 0.8rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.7rem, 4.5vw, 2.2rem);
+    margin-bottom: 0.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.97rem;
+    padding: 0 0.2rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 0.9rem 1.2rem;
+  }
+
+  .filter-btn {
+    padding: 0.55rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .modal-overlay {
+    padding: 0.9rem;
+  }
+
+  .toast-container {
+    left: 0.85rem;
+    right: 0.85rem;
+    bottom: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-size: 220% 220%, 100% 100%, 100% 100%, 100% 100%;
+  }
+
+  .container {
+    padding: 0 0.85rem;
+  }
+
+  .section-padding {
+    padding: 3.25rem 0;
+  }
+
+  .section-badge {
+    margin-bottom: 0.8rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+
+  .section-subtitle {
+    font-size: 0.92rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    font-size: 0.9rem;
+  }
+}
+
 /* Futuristic Buttons */
 @keyframes shine {
   0% { left: -100%; }
@@ -358,7 +478,15 @@ body::before {
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* Custom Filter Buttons */
+/* Custom Filter Buttons & Tabs */
+.filter-tabs-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.filter-tabs-wrapper {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .filter-btn {
   padding: 0.6rem 1.4rem;
   border-radius: 9999px;
@@ -366,8 +494,11 @@ body::before {
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: var(--text-muted);
   font-weight: 600;
+  font-size: 0.9rem;
   cursor: pointer;
+  white-space: nowrap;
   transition: var(--transition-fast);
+  touch-action: manipulation;
 }
 
 .filter-btn.active {
@@ -409,4 +540,107 @@ body::before {
   transform: translateY(-8px) scale(1.01);
   box-shadow: 0 22px 40px rgba(255, 45, 45, 0.25);
 }
+
+/* =========================================================
+   RESPONSIVE MEDIA QUERIES FOR ALL DEVICE SIZES
+   ========================================================= */
+
+/* 1. Ultra Large Screens / 4K (1440px+) */
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* 2. Laptops & Small Desktops (1025px - 1280px) */
+@media screen and (max-width: 1280px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+
+/* 3. Tablets & IPads (769px - 1024px) */
+@media screen and (max-width: 1024px) {
+  .section-padding {
+    padding: 4.5rem 0;
+  }
+  .section-title {
+    font-size: 2.25rem;
+  }
+  .glass-card {
+    border-radius: var(--radius-md);
+  }
+}
+
+/* 4. Mobile Devices & Small Tablets (up to 768px) */
+@media screen and (max-width: 768px) {
+  .section-padding {
+    padding: 3.5rem 0;
+  }
+  .container {
+    padding: 0 1rem;
+  }
+  .section-title {
+    font-size: 1.85rem;
+  }
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    width: 100%;
+  }
+  .modal-overlay {
+    padding: 0.75rem;
+  }
+  .toast-container {
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+  }
+}
+
+/* 5. Mobile Smartphones (up to 480px) */
+@media screen and (max-width: 480px) {
+  .section-padding {
+    padding: 2.5rem 0;
+  }
+  .section-title {
+    font-size: 1.6rem;
+  }
+  .section-badge {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+  }
+  .filter-btn {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.825rem;
+  }
+}
+
+/* 6. Touch Devices Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .hover-lift:hover {
+    transform: none;
+  }
+  .btn-primary:hover {
+    transform: none;
+  }
+}
+
+/* 7. Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .light-sweep, .btn-primary::after, .btn-glow, .animate-float {
+    animation: none !important;
+  }
+}
+
 

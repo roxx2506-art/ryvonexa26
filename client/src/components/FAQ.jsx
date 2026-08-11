@@ -4,7 +4,7 @@ import { HelpCircle, ChevronDown, Sparkles } from 'lucide-react';
 const faqs = [
   {
     q: 'Who is eligible to participate in RYVONEXA 2026?',
-    a: 'Students pursuing B.E / B.Tech (CSE, IT, AI-DS) or PG degrees (M.E, MCA, M.Sc) from any accredited engineering college are eligible to participate.'
+    a: 'Students pursuing B.E / B.Tech (CSE, IT, AI-DS & ECE) or PG degrees (M.E, MCA, M.Sc) from any accredited engineering college are eligible to participate.'
   },
   {
     q: 'Is spot registration available on the day of the event?',

@@ -37,25 +37,27 @@ const Events = ({ events, onSelectEvent, onOpenRegister }) => {
           </p>
 
           {/* Filter Categories */}
-          <div className="flex items-center justify-center gap-3 mt-8">
-            <button
-              onClick={() => setFilter('all')}
-              className={`filter-btn ${filter === 'all' ? 'active' : ''}`}
-            >
-              All Events ({events.length})
-            </button>
-            <button
-              onClick={() => setFilter('technical')}
-              className={`filter-btn ${filter === 'technical' ? 'active' : ''}`}
-            >
-              Technical Events
-            </button>
-            <button
-              onClick={() => setFilter('non-technical')}
-              className={`filter-btn ${filter === 'non-technical' ? 'active' : ''}`}
-            >
-              Non-Technical Events
-            </button>
+          <div className="filter-tabs-wrapper w-full overflow-x-auto pb-2 mt-8 no-scrollbar">
+            <div className="flex items-center justify-center min-w-max md:min-w-0 gap-2 sm:gap-3 mx-auto px-2">
+              <button
+                onClick={() => setFilter('all')}
+                className={`filter-btn whitespace-nowrap ${filter === 'all' ? 'active' : ''}`}
+              >
+                All Events ({events.length})
+              </button>
+              <button
+                onClick={() => setFilter('technical')}
+                className={`filter-btn whitespace-nowrap ${filter === 'technical' ? 'active' : ''}`}
+              >
+                Technical Events
+              </button>
+              <button
+                onClick={() => setFilter('non-technical')}
+                className={`filter-btn whitespace-nowrap ${filter === 'non-technical' ? 'active' : ''}`}
+              >
+                Non-Technical Events
+              </button>
+            </div>
           </div>
         </div>
 

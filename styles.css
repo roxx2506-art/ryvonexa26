@@ -931,11 +931,18 @@ body::before {
     grid-template-columns: 1fr;
   }
   .filter-tabs {
-    gap: 0.4rem;
+    gap: 0.5rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 0.5rem;
+    justify-content: flex-start;
+    -webkit-overflow-scrolling: touch;
   }
   .filter-btn {
-    padding: 0.4rem 0.9rem;
-    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
   .timeline-card {
     width: 100%;
@@ -985,6 +992,9 @@ body::before {
   }
   .brand-dept {
     display: none;
+  }
+  .college-info-col {
+    display: none !important;
   }
 }
 

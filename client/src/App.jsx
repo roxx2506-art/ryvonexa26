@@ -9,6 +9,7 @@ import Timeline from './components/Timeline';
 import Brochure from './components/Brochure';
 import Team from './components/Team';
 import Location from './components/Location';
+import AboutAssociation from './components/AboutAssociation';
 import FAQ from './components/FAQ';
 
 import AdminModal from './components/AdminModal';
@@ -87,6 +88,8 @@ function App() {
         <Location />
 
         <FAQ />
+
+        <AboutAssociation />
       </main>
 
       {/* Footer */}

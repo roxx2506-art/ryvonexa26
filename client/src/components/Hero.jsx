@@ -11,10 +11,43 @@ const Hero = ({ onOpenRegister, stats }) => {
 
       <div className="container relative z-10 text-center">
 
-        {/* Department & Association Badge */}
-        <div className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs md:text-sm font-semibold tracking-widest uppercase mb-6 backdrop-blur-md animate-pulse max-w-full text-center">
-          • Department of CSE & Computer Association For Folksy Engineers (CAFE) •
+        {/* College Header & Association Banner */}
+        <div className="flex flex-col items-center justify-center gap-3 mb-8">
+          {/* College Name with Logo */}
+          <div className="flex items-center justify-center gap-3 px-5 py-2.5 rounded-2xl bg-white/5 border border-amber-500/30 backdrop-blur-md shadow-lg">
+            <img
+              src="/newlogo.jpg"
+              alt="P.S.R. Engineering College Logo"
+              className="w-8 h-8 md:w-10 md:h-10 object-contain"
+            />
+            <div className="text-left">
+              <div className="font-heading font-extrabold text-sm sm:text-base md:text-lg text-white tracking-wide leading-tight">
+                P.S.R. ENGINEERING COLLEGE <span className="text-amber-400 text-xs font-mono font-normal">(AUTONOMOUS, NAAC A+)</span>
+              </div>
+              <div className="text-[11px] text-gray-400 font-mono tracking-wider">
+                SIVAKASI - 626140, TAMIL NADU
+              </div>
+            </div>
+          </div>
+
+          {/* Department & Association Badge with CAFE Logo */}
+          <div className="inline-flex items-center justify-center gap-3 px-5 py-2.5 rounded-full bg-amber-950/40 border border-amber-500/30 text-amber-400 text-xs md:text-sm font-semibold tracking-widest uppercase backdrop-blur-md max-w-full text-center">
+            <div className="w-7 h-7 rounded-full border border-amber-400/50 overflow-hidden bg-black flex-shrink-0">
+              <img
+                src="/logo.jpg"
+                alt="CAFE Logo"
+                className="w-full h-full object-cover rounded-full"
+              />
+            </div>
+            <span>Department of CSE & Computer Association For Folksy Engineers (CAFE)</span>
+          </div>
+
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-950/40 border border-red-500/30 text-red-400 text-xs font-semibold tracking-widest uppercase backdrop-blur-md">
+            • Proudly Presents •
+          </div>
         </div>
+
+
 
         {/* Symposium Main Title */}
         <h1 className="font-heading font-black text-5xl sm:text-7xl md:text-8xl tracking-tight text-white mb-4">

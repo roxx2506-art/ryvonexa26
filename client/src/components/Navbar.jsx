@@ -15,7 +15,7 @@ const Navbar = ({ onOpenRegister, onOpenAdmin }) => {
       }
 
       // ScrollSpy active section detection
-      const sections = ['home', 'events', 'timeline', 'brochure', 'team', 'location'];
+      const sections = ['home', 'events', 'timeline', 'brochure', 'team', 'location', 'about'];
       const scrollPos = window.scrollY + 200;
 
       for (const section of sections) {
@@ -41,7 +41,8 @@ const Navbar = ({ onOpenRegister, onOpenAdmin }) => {
     { name: 'Timeline', href: '#timeline', id: 'timeline' },
     { name: 'Brochure', href: '#brochure', id: 'brochure' },
     { name: 'Team', href: '#team', id: 'team' },
-    { name: 'Location', href: '#location', id: 'location' }
+    { name: 'Location', href: '#location', id: 'location' },
+    { name: 'About', href: '#about', id: 'about' }
   ];
 
   return (
@@ -52,8 +53,7 @@ const Navbar = ({ onOpenRegister, onOpenAdmin }) => {
       <div className="container flex items-center justify-between">
         {/* Brand Logo */}
         <a href="#home" className="flex items-center gap-3 text-decoration-none group">
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-400 to-purple-600 p-[1px] shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform">
-
+          <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-400 to-red-600 p-[1px] shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform flex-shrink-0">
             <div className="w-full h-full bg-[#050505] rounded-xl flex items-center justify-center overflow-hidden">
               <img
                 src="/newlogo.jpg"
@@ -61,13 +61,12 @@ const Navbar = ({ onOpenRegister, onOpenAdmin }) => {
                 className="w-8 h-8 object-contain"
               />
             </div>
-
           </div>
           <div>
-            <div className="font-heading font-black text-xl tracking-wider text-white flex items-center gap-1">
-              RYVONEXA <span className="text-cyan-400 text-sm font-code">'26</span>
+            <div className="font-heading font-black text-lg md:text-xl tracking-wider text-white flex items-center gap-1">
+              RYVONEXA <span className="text-amber-400 text-xs md:text-sm font-code">'26</span>
             </div>
-            <div className="text-[10px] text-gray-400 tracking-widest uppercase font-mono">
+            <div className="text-[10px] text-amber-400/90 tracking-widest uppercase font-mono font-semibold">
               Dept. of CSE
             </div>
           </div>
@@ -112,14 +111,14 @@ const Navbar = ({ onOpenRegister, onOpenAdmin }) => {
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-[#0a0a08]/95 backdrop-blur-2xl border-b border-cyan-500/20 px-6 py-6 animate-fadeIn">
+        <div className="md:hidden bg-[#0a0a08]/95 backdrop-blur-2xl border-b border-amber-500/20 px-6 py-6 animate-fadeIn">
           <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <a
                 key={link.id}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className={`text-base font-medium py-2 border-b border-white/5 ${activeSection === link.id ? 'text-cyan-400' : 'text-gray-300'
+                className={`text-base font-medium py-2 border-b border-white/5 ${activeSection === link.id ? 'text-amber-400 font-semibold' : 'text-gray-300'
                   }`}
               >
                 {link.name}
