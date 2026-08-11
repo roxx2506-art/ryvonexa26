@@ -133,12 +133,12 @@ const Brochure = () => {
               </button>
 
               <button
-                onClick={() => handleDownload('png')}
+                onClick={() => handleDownload('pdf')}
                 disabled={downloading}
                 className="btn-primary btn-glow py-3.5 px-6 text-sm flex items-center justify-center gap-2 flex-1 disabled:opacity-50"
               >
                 <Download className={`w-4 h-4 ${downloading ? 'animate-bounce' : ''}`} />
-                {downloading ? 'Downloading...' : 'Download Poster'}
+                {downloading ? 'Downloading...' : 'Download Brochure'}
               </button>
             </div>
           </div>
@@ -196,10 +196,10 @@ const Brochure = () => {
                 </button>
 
                 <button
-                  onClick={() => handleDownload('png')}
+                  onClick={() => handleDownload('pdf')}
                   className="btn-primary py-2 px-4 text-xs flex items-center gap-2"
                 >
-                  <Download className="w-3.5 h-3.5" /> Download Image
+                  <Download className="w-3.5 h-3.5" /> Download PDF
                 </button>
               </div>
             </div>
