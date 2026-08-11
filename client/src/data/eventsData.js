@@ -9,14 +9,14 @@ export const eventsData = [
     fullDesc:
       'TechTalk Arena is a platform for participants to present innovative ideas, research findings, or emerging technologies in Computer Science and Engineering. It evaluates technical knowledge, presentation skills, and confidence in handling questions.',
     rules: [
-      'Individual or team participation (max 2 members).',
+      'Individual or team participation (max 4 members).',
       'Topic must be related to CS, IT, AI, IoT, Cybersecurity, Cloud, Web, or Data Science.',
       'Presentation: 8–10 minutes + 2–3 minutes Q&A.',
       'Maximum 15 PPT slides allowed.',
       'Plagiarism strictly prohibited; references must be included.',
       'Judging based on technical content, innovation, presentation, and confidence.',
     ],
-    teamSize: '1 - 2 Members',
+    teamSize: '1 - 4 Members',
     time: 'TBA',
     venue: 'Seminar Hall',
     icon: 'FileText',
