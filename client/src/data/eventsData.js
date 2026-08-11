@@ -59,7 +59,7 @@ export const eventsData = [
       'The Prompt Cipher is a two-round Generative AI competition testing creativity and prompt engineering skills. Participants first extract hidden data, then recreate AI-generated images with precision.',
     rules: [
       'Individual or team of 2.',
-      'Round 1: Extract hidden flags using prompts.',
+      'Round 1:Create AI generated video for given scenario or theme.',
       'Top teams qualify for Round 2.',
       'Round 2: Recreate AI-generated images.',
       'Maximum 3 prompt attempts per image.',
