@@ -221,8 +221,7 @@ const Footer = () => {
 
           <div className="flex items-center gap-1 text-gray-400">
             Created by Ranjith & Sasidharan
-            <Heart className="w-3.5 h-3.5 text-red-400 fill-red-400 mx-1" />
-            for PSRians & Future Engineers
+
           </div>
 
         </div>
