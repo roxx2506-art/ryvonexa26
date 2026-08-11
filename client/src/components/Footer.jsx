@@ -72,7 +72,7 @@ const Footer = () => {
                 <Phone className="w-4 h-4 text-purple-400 shrink-0" />
 
                 <p className="text-gray-400 text-xs font-mono">
-                  9751780504/9344844533
+                  7904832661 / 9751780504
                 </p>
               </div>
 
@@ -93,7 +93,7 @@ const Footer = () => {
                 <Bus className="w-4 h-4 text-yellow-400 shrink-0" />
 
                 <p className="text-gray-400 text-xs font-mono">
-                  Transport:9344844533
+                  Transport:8760923731
                 </p>
               </div>
 
@@ -182,7 +182,7 @@ const Footer = () => {
             {/* Socials */}
             <div className="flex items-center gap-3 mb-6">
 
-              
+
 
             </div>
 

@@ -52,6 +52,29 @@ const teamMembers = [
     github: "",
     mail: "ranjiths200625@gmail.com",
   },
+  {
+    name: "Sathees Kumar P",
+    role: "Event Coordinator",
+    avatar: "1000358877.jpg",
+    linkedin: "",
+    github: "",
+    mail: "Satheeskumarp1214@gmail.com",
+  },
+  {
+    name: "Packiyalakshmi M",
+    role: "Event Coordinator",
+    avatar: "Packiyalakshmi_M.jpg",
+    linkedin: "",
+    github: "",
+    mail: "backiyalakshmim029@gmail.com",
+  }, {
+    name: "Jeya Jeeva J ",
+    role: "Event Coordinator",
+    avatar: "jeeva.jpg",
+    linkedin: "",
+    github: "",
+    mail: "jeyajeevaj17@gmail.com",
+  },
 ];
 
 const Team = () => {
