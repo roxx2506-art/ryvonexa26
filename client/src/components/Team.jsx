@@ -53,6 +53,7 @@ const teamMembers = [
     github: "",
     mail: "Satheeskumarp1214@gmail.com",
   },
+
 ];
 
 const Team = () => {
