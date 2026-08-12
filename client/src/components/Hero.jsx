@@ -12,12 +12,15 @@ const Hero = ({ onOpenRegister, stats }) => {
       <div className="container relative z-10 text-center">
         {/* Department of CSE & CAFE Association Banner */}
         <div className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-amber-950/40 border border-amber-500/30 text-amber-400 text-xs md:text-sm font-semibold tracking-widest uppercase backdrop-blur-md mb-3 max-w-full text-center">
-          • Department of CSE & Computer Association for Folksy Engineers •
+          • Department of CSE & Computer Association for Folksy Engineers (CAFE) •
+
         </div>
         <br />
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-950/40 border border-red-500/30 text-red-400 text-xs font-semibold tracking-widest uppercase backdrop-blur-md mb-6">
           • Proudly Presents •
         </div>
+
+
 
         {/* Symposium Main Title */}
         <h1 className="font-heading font-black text-5xl sm:text-7xl md:text-8xl tracking-tight text-white mb-4">
@@ -33,9 +36,9 @@ const Hero = ({ onOpenRegister, stats }) => {
         <p className="font-heading text-xl sm:text-2xl md:text-3xl font-medium gradient-text max-w-3xl mx-auto mb-8 leading-snug">
           Where innovation meets intelligence!
         </p>
-
         {/* Department Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs md:text-sm font-semibold tracking-widest uppercase mb-6 backdrop-blur-md animate-pulse">
+
           • National Level Technical Symposium •
         </div>
 
@@ -47,17 +50,19 @@ const Hero = ({ onOpenRegister, stats }) => {
           </div>
           <div className="flex items-center gap-2.5 px-5 py-2.5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-lg text-gray-200 text-sm md:text-base font-mono">
             <MapPin className="w-5 h-5 text-purple-400" />
-            <span>P.S.R Engineering College</span>
+            <span> P.S.R Engineering College</span>
           </div>
+
           <div className="flex items-center gap-2.5 px-5 py-2.5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-lg text-gray-200 text-sm md:text-base font-mono">
             <MapPin className="w-5 h-5 text-purple-400" />
             <span>CSE Block</span>
           </div>
+
         </div>
 
         {/* Short Description */}
         <p className="text-gray-300 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed font-light">
-          Think. Innovate. Compete.<br />
+          Think. Innovate. Compete.<br></br>
           Challenge your technical expertise through speed debugging, competitive coding, prompt engineering, and e-sports while connecting with brilliant minds from across the nation.
         </p>
 
@@ -69,13 +74,14 @@ const Hero = ({ onOpenRegister, stats }) => {
           </button>
 
           <a href="#events" className="btn-secondary text-base px-8 py-4">
-            Explore Events
+            Explore  Events
             <ArrowRight className="w-5 h-5" />
           </a>
         </div>
 
         {/* Live Symposium Stats Highlights */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+
           <div className="glass-card p-4 text-center">
             <div className="font-heading font-extrabold text-2xl md:text-3xl text-purple-400 mb-1">
               8
@@ -90,12 +96,12 @@ const Hero = ({ onOpenRegister, stats }) => {
               Exciting Prizes
             </div>
             <div className="text-xs text-gray-400 font-mono uppercase tracking-wider">
-              For Winners
             </div>
+            For Winners.
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 
