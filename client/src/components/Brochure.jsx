@@ -13,7 +13,7 @@ const Brochure = () => {
   const [downloading, setDownloading] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const brochureImageSrc = '/CSE Symposium Most Final Broucher Without Boarder.png';
+  const brochureImageSrc = '/CSE Symposium Finalized Broucher (Without Boarder).png';
 
   const handleDownload = (type = 'pdf') => {
     setDownloading(true);
