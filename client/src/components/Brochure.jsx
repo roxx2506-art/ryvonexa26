@@ -23,7 +23,7 @@ const Brochure = () => {
         link.href = brochureImageSrc;
         link.download = 'RYVONEXA-26_Official_Brochure.png';
       } else {
-        link.href = '/CSE Symposium Most Final Broucher.pdf';
+        link.href = '\CSE Symposium Finalized Broucher.pdf';
         link.download = 'RYVONEXA-26_Official_Brochure.pdf';
       }
       document.body.appendChild(link);
