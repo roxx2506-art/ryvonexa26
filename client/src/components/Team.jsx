@@ -13,7 +13,7 @@ const teamMembers = [
   {
     name: "Dr Ramathilagam Arunagiri",
     role: "Professor & COE",
-    avatar: "coe.jpg",
+    avatar: "ramathilgam.jpg",
     linkedin: "",
     github: "",
     mail: "ramathilagam@psr.edu.in",
