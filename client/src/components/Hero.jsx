@@ -11,12 +11,12 @@ const Hero = ({ onOpenRegister, stats }) => {
 
       <div className="container relative z-10 text-center">
         {/* Department of CSE & CAFE Association Banner */}
-        <div className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-amber-950/40 border border-amber-500/30 text-amber-400 text-xs md:text-sm font-semibold tracking-widest uppercase backdrop-blur-md mb-3 max-w-full text-center">
-          • Department of CSE & Computer Association for Folksy Engineers (CAFE) •
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-cyan-400 text-xs md:text-sm font-semibold tracking-widest uppercase mb-6 backdrop-blur-md animate-pulse">
+           Department of CSE & Computer Association for Folksy Engineers (CAFE) 
 
         </div>
         <br />
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-950/40 border border-red-500/30 text-red-400 text-xs font-semibold tracking-widest uppercase backdrop-blur-md mb-6">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-950/40 border border-red-500/30 text-red-400 text-xs font-semibold tracking-widest uppercase backdrop-blur-md mb-6 animate-pulse">
           • Proudly Presents •
         </div>
 
