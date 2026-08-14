@@ -12,7 +12,7 @@ const teamMembers = [
   },
   {
     name: "Dr Ramathilagam Arunagiri",
-    role: "Professor & COE",
+    role: "Professor (CSE) & COE",
     avatar: "coe.jpg",
     linkedin: "",
     github: "",
@@ -28,7 +28,7 @@ const teamMembers = [
   },
   {
     name: "Dr Priyadarsini Seenivasan",
-    role: "Professor",
+    role: "Professor (CSE)",
     avatar: "priyadharsini.jpg",
     linkedin: "",
     github: "",
