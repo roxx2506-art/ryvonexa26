@@ -131,7 +131,7 @@ export const eventsData = [
     fullDesc:
       'Crack the Vault is a deduction-based AI game where participants ask strategic questions to identify a hidden tech term within 10 attempts.',
     rules: [
-      'Individual participation.',
+      
       'Maximum 10 questions allowed.',
       'AI answers: Yes / No / Partially / Irrelevant / Invalid.',
       'Final guess after questions.',
@@ -155,7 +155,7 @@ export const eventsData = [
     fullDesc:
       'Memory Wall is a fast-paced memory challenge where participants must recall as many objects as possible from a short display.',
     rules: [
-      'Individual participation.',
+      
       '20–30 objects shown for 15 seconds.',
       '1 minute to recall.',
       'No electronic devices allowed.',
