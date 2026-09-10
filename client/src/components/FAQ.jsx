@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: 'What is the registration fee structure?',
-    a: 'General Symposium Registration fee is ₹500 per head, which unlocks access to selected events, official welcome kit, participation certificates, and complimentary lunch.'
+    a: 'General Symposium Registration fee is ₹350 per head, which unlocks access to selected events, official welcome kit, participation certificates, and complimentary lunch.'
   },
   {
     q: 'Will participation certificates be issued to everyone?',
