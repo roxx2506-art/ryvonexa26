@@ -16,3 +16,6 @@ client/dist/
 .DS_Store
 Thumbs.db
 .vscode/
+
+.vercel
+.env*

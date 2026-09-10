@@ -7,8 +7,7 @@ import {
   ArrowUp,
   Heart,
   MapPin,
-  Phone,
-  Bus
+  Phone
 } from 'lucide-react';
 
 const Footer = () => {
@@ -88,14 +87,7 @@ const Footer = () => {
                 </a>
               </div>
 
-              {/* Transport */}
-              <div className="flex items-center gap-3">
-                <Bus className="w-4 h-4 text-yellow-400 shrink-0" />
 
-                <p className="text-gray-400 text-xs font-mono">
-                  Transport:8760923731
-                </p>
-              </div>
 
             </div>
           </div>

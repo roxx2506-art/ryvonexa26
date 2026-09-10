@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Navigation, Phone, Mail, Clock, Bus } from 'lucide-react';
+import { MapPin, Navigation, Phone, Mail, Clock } from 'lucide-react';
 
 const Location = () => {
   return (
@@ -85,23 +85,7 @@ const Location = () => {
                   </div>
                 </div>
 
-                {/* Transport */}
-                <div className="flex items-start gap-3">
-                  <div className="p-2 rounded-lg bg-pink-500/10 border border-pink-500/30 text-pink-400 shrink-0">
-                    <Bus className="w-4 h-4" />
-                  </div>
 
-                  <div>
-                    <span className="text-xs font-mono text-gray-400 block">
-                      College Transport
-                    </span>
-
-                    <span className="text-white text-xs font-light leading-relaxed">
-                      College transportation facilities are available for
-                      students and faculty. Transport Contact: 8760923731.
-                    </span>
-                  </div>
-                </div>
 
                 {/* Campus Timing */}
                 <div className="flex items-start gap-3">
